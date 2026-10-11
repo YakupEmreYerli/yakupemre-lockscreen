@@ -7,7 +7,9 @@ A calm Plasma 6 lock screen: the same glacier lake at dusk, frosted side panel, 
 ![Qt 6](https://img.shields.io/badge/Qt-6-41cd52)
 [![CI](https://github.com/YakupEmreYerli/yakupemre-lockscreen/actions/workflows/ci.yml/badge.svg)](https://github.com/YakupEmreYerli/yakupemre-lockscreen/actions/workflows/ci.yml)
 
-![yakupemre-lockscreen preview](Previews/preview.jpg)
+> Türkçe: [README.tr.md](README.tr.md)
+
+![yakupemre-lockscreen: the lock screen with its frosted panel, clock, avatar and password field over a glacier lake at dusk](docs/banner.en.png)
 
 ## Sibling project
 
