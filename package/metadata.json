@@ -1,0 +1,18 @@
+{
+    "KPackageStructure": "Plasma/Shell",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "Yakup Emre Yerli"
+            }
+        ],
+        "Description": "Glacier lake lock screen with a frosted panel and Inter type, the sibling of yakupemre-sddm",
+        "Id": "yakupemre-lockscreen",
+        "License": "GPL-3.0-or-later",
+        "Name": "yakupemre-lockscreen",
+        "Version": "1.0.0",
+        "Website": "https://github.com/YakupEmreYerli/yakupemre-lockscreen"
+    },
+    "X-Plasma-APIVersion": "2",
+    "X-Plasma-FallbackPackage": "org.kde.plasma.desktop"
+}

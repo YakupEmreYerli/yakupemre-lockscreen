@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Shellcheck scripts
+        run: shellcheck install.sh uninstall.sh
+
+      - name: Package metadata is valid
+        run: |
+          jq -e '.KPackageStructure == "Plasma/Shell"' package/metadata.json
+          jq -e '."X-Plasma-APIVersion" == "2"' package/metadata.json
+          jq -e '.KPlugin.Id == "yakupemre-lockscreen"' package/metadata.json
+
+      - name: Referenced files exist
+        run: |
+          cd package/contents/lockscreen
+          test -f LockScreen.qml
+          grep -ohE '"assets/[^"]+"' ./*.qml | tr -d '"' | sort -u | while read -r f; do
+            test -f "$f" || { echo "missing $f"; exit 1; }
+          done
+          cd - >/dev/null
+          test -f Previews/preview.jpg
